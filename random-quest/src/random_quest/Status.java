@@ -45,4 +45,6 @@ public class Status {
 		return this.hp;
 	}
 
+
+
 }

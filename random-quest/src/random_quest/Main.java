@@ -31,11 +31,12 @@ public class Main{
 			}
 
 			if(eSt.getHp() <= 0){
-				System.out.println("俺の勝ち!");
+				System.out.println("player Win!");
 				break;
 			}
 
 			line(35);
+			sleep();
 
 			System.out.println("敵のターン");
 			command = rand.nextInt(2);
@@ -46,11 +47,12 @@ public class Main{
 			}
 
 			if(pSt.getHp() <= 0){
-				System.out.println("俺の負け!");
+				System.out.println("player Lose...");
 				break;
 			}
 
 			line(35);
+			sleep();
 		}
 	}
 
@@ -60,5 +62,13 @@ public class Main{
 			System.out.print("-");
 		}
 		System.out.println();
+	}
+
+	public static void sleep(){
+		try {
+		    Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			//System.out.println("end phase");
+		}
 	}
 }
