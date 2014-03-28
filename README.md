@@ -1,2 +1,2 @@
-java-tutorial
+java-practice
 =============
