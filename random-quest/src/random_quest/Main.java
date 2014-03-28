@@ -15,12 +15,12 @@ public class Main{
 		Status pSt = new Status("player",rand.nextInt(99)+1);
 		Status eSt = new Status("enemy",rand.nextInt(99)+1);
 
-		System.out.println("敵が現れた!!");
+		System.out.println("enemy appeared");
 
 		while(true){
 			System.out.printf("%s:%d %s:%d\n",pSt.getName(),pSt.getHp(), eSt.getName(),eSt.getHp());
-			System.out.println("playerのターン");
-			System.out.println("攻撃(0)/回復(1)/逃げる(2)");
+			System.out.println("player phase");
+			System.out.println("attack(0)/heal(1)/run away(2)");
 
 			command = scan.nextInt();
 			if(command == 0){
@@ -40,7 +40,7 @@ public class Main{
 			Utility.line(35);
 			Utility.sleep();
 
-			System.out.println("敵のターン");
+			System.out.println("enemy phase");
 			command = rand.nextInt(2);
 			if(command == 0){
 				eSt.attack(pSt);
