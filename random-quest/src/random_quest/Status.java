@@ -1,5 +1,6 @@
 package random_quest;
 
+
 public class Status {
 	private String name;
 	private int    hp;
@@ -15,6 +16,7 @@ public class Status {
 		int damage = Main.rand.nextInt(49)+1;
 		target.setHp(target.getHp() - damage);
 		System.out.printf("%sに%dのダメージ!\n",target.getName(),damage);
+		endPhase_getStatus();
 	}
 
 	public void heal(){
@@ -26,11 +28,12 @@ public class Status {
 			if(hp + heal > maxHp) heal = maxHp - hp;
 			this.hp += heal;
 			System.out.printf("%sのHPが%d回復した\n",name,heal);
+			endPhase_getStatus();
 		}
 	}
 
 	public void runAway(){
-		System.out.printf("%sは逃げ出した\n",name);
+		System.out.printf("run away",name);
 	}
 
 	public String getName(){
@@ -45,6 +48,7 @@ public class Status {
 		return this.hp;
 	}
 
-
-
+	public void endPhase_getStatus(){
+		System.out.printf("<<End phase>> %s HP[%d]\n",this.name,this.hp);
+	}
 }
