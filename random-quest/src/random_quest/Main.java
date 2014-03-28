@@ -6,14 +6,12 @@ public class Main{
 	public static final Random rand = new Random();
 	public static void main(String[] args){
 
-
 		Scanner scan = new Scanner(System.in);
 
 		int command;
 
 		Status pSt = new Status("player",rand.nextInt(99)+1);
 		Status eSt = new Status("enemy",rand.nextInt(99)+1);
-
 
 		System.out.println("敵が現れた!!");
 
