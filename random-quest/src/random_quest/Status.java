@@ -1,3 +1,5 @@
+package random_quest;
+
 public class Status {
 	private String name;
 	private int    hp;

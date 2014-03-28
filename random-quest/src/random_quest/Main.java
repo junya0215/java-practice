@@ -1,7 +1,8 @@
+package random_quest;
 import java.util.Random;
 import java.util.Scanner;
 
-class Main{
+public class Main{
 	public static final Random rand = new Random();
 	public static void main(String[] args){
 
