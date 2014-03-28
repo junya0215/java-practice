@@ -2,6 +2,8 @@ package random_quest;
 import java.util.Random;
 import java.util.Scanner;
 
+import random_quest.util.Utility;
+
 public class Main{
 	public static final Random rand = new Random();
 	public static void main(String[] args){
@@ -35,8 +37,8 @@ public class Main{
 				break;
 			}
 
-			line(35);
-			sleep();
+			Utility.line(35);
+			Utility.sleep();
 
 			System.out.println("敵のターン");
 			command = rand.nextInt(2);
@@ -51,24 +53,8 @@ public class Main{
 				break;
 			}
 
-			line(35);
-			sleep();
-		}
-	}
-
-
-	public static void line(int l){
-		for(int i = 0; i < l; i++){
-			System.out.print("-");
-		}
-		System.out.println();
-	}
-
-	public static void sleep(){
-		try {
-		    Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			//System.out.println("end phase");
+			Utility.line(35);
+			Utility.sleep();
 		}
 	}
 }
