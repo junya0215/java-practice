@@ -17,22 +17,31 @@ class Game{
 		System.out.println("GAME START!");
 
 		while(true){
-			System.out.println("手を選んでください[グー(0) チョキ(1) パー(2)]");
-			player = scan.nextInt();
+			do{
+				System.out.println("Please choose one[goo(0) choki(1) par(2)]");
+				player = scan.nextInt();
+				if(player < 0 || player >= 3)
+					System.out.println("Please input again.");
+			}while(player < 0 || player >= 3);
 			npc    = rand.nextInt(3);
 
 			//judge
 			System.out.printf("player:%s npc:%s\n",hands[player],hands[npc]);
-			GameSystem.sleep();
+			sleep();
 
 			System.out.println("--------------------------");
-			GameSystem.judge(player,npc);
+			Judge.judge(player,npc);
 			if(player != npc){
 				break;
 			}
 		}
 
+	}
 
-
+	public static void sleep(){
+		try {
+		    Thread.sleep(3000);
+		} catch (InterruptedException e) {
+		}
 	}
 }
