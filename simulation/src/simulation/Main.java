@@ -1,8 +1,8 @@
-package java_study;
+package simulation;
 
 import java.util.Scanner;
 
-class Method{
+public class Main {
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
@@ -42,9 +42,9 @@ class Method{
     public static void displayMap(int w,int h,char[] m){
         for(int i = 0; i < h; i++){
             for(int j = 0; j < w; j++){
-                Sc.pt(m[j+i*w]);
+                System.out.print(m[j+i*w]);
             }
-            Sc.pt("\n");
+            System.out.print("\n");
         }
     }
 
