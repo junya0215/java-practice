@@ -11,8 +11,6 @@ public class Main{
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 
-		int command;
-
 		Status pSt = new Status("player",rand.nextInt(99)+1);
 		Status eSt = new Status("enemy",rand.nextInt(99)+1);
 
@@ -23,7 +21,7 @@ public class Main{
 			System.out.println("player phase");
 			System.out.println("attack(0)/heal(1)/run away(2)");
 
-			command = scan.nextInt();
+			int command = scan.nextInt();
 			if(command == 0){
 				pSt.attack(eSt);
 			}else if(command == 1){
