@@ -16,7 +16,7 @@ public class Main{
 		Status pSt = new Status("player",rand.nextInt(99)+1);
 		Status eSt = new Status("enemy",rand.nextInt(99)+1);
 
-		System.out.println("enemy appeared");
+		System.out.println(eSt.getName() + " appeared");
 
 		while(true){
 			System.out.printf("%s:%d %s:%d\n",pSt.getName(),pSt.getHp(), eSt.getName(),eSt.getHp());

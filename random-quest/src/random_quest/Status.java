@@ -33,7 +33,7 @@ public class Status {
 	}
 
 	public void runAway(){
-		System.out.printf("run away",name);
+		System.out.printf("run away");
 	}
 
 	public String getName(){
